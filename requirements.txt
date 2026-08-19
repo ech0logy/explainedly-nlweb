@@ -1,3 +1,5 @@
 nlweb-core
+nlweb-network
+nlweb-dataload
 nlweb-retrieval
 nlweb-models
