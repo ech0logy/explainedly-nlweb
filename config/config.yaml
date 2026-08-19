@@ -1,0 +1,26 @@
+# Explainedly NLWeb provider configuration.
+# Based on the current NLWeb Core provider configuration format.
+
+llm:
+  provider: openai
+  import_path: nlweb_models.llm.openai
+  class_name: provider
+  api_key_env: OPENAI_API_KEY
+  models:
+    high: gpt-4o
+    low: gpt-4o-mini
+
+embedding:
+  provider: openai
+  import_path: nlweb_models.embedding.openai_embedding
+  class_name: get_openai_embeddings
+  api_key_env: OPENAI_API_KEY
+  model: text-embedding-3-small
+
+retrieval:
+  provider: qdrant
+  import_path: nlweb_retrieval.qdrant
+  class_name: QdrantVectorClient
+  # Local development storage. For production, switch to Qdrant Cloud
+  # using QDRANT_URL and QDRANT_API_KEY.
+  database_path: ./data/qdrant_db
