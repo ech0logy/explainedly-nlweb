@@ -1,0 +1,6 @@
+site:
+  name: Explainedly
+  url: https://www.explainedly.net/
+  sitemap: https://www.explainedly.net/sitemap.xml
+  source_id: explainedly
+  content_type: NewsArticle
